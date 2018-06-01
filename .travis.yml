@@ -10,3 +10,25 @@ script:
 - make latex PROJECT=132-765-F18C-500 BUILDDIR=_build COMPILER=xelatex
 # - ./dropbox_uploader.sh upload _build/main.pdf ${TRAVIS_BRANCH}/main-latest.pdf
 # - ./dropbox_uploader.sh upload _build/main.pdf ${TRAVIS_BRANCH}/main-${TRAVIS_JOB_NUMBER}.pdf
+
+
+# after_success:
+#   - git config --global user.email "github@hoelweb.com"
+#   - git config --global user.name "jkhoel"
+#   - git checkout -b master
+#   - git add . *.pdf
+#   - git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+#   - git remote add origin-pages https://${GH_TOKEN}@github.com/MVSE-outreach/resources.git > /dev/null 2>&1
+#   - git push --quiet --set-upstream origin-pages gh-pages 
+
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "jkhoel"
+  - git config --local user.email "github@hoelweb.com"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+deploy:
+  provider: releases
+  api_key: "$GH_TOKEN"
+  file_glob: true
+  file: _build/*
+  skip_cleanup: true
