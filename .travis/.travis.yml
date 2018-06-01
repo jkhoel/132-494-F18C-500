@@ -22,7 +22,6 @@ script:
 #   - git push --quiet --set-upstream origin-pages gh-pages 
 
 before_deploy:
-  # Set up git user name and tag this commit
   - git config --local user.name "jkhoel"
   - git config --local user.email "github@hoelweb.com"
   - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
