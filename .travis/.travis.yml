@@ -1,13 +1,11 @@
 sudo: required
 dist: trusty
 before_install:
-# - openssl aes-256-cbc -K $encrypted_XXXXXXXXXXXX_key -iv $encrypted_XXXXXXXXXXXX_iv -in .dropbox_uploader.enc -out ~/.dropbox_uploader -d
-# - ./tlsetup.sh
-- chmod +x travis.sh 
-- ./travis.sh
+- chmod +x .travis/tlsetup.sh 
+- .travis/tlsetup.sh
 
 script:
-- make latex PROJECT=132-765-F18C-500 BUILDDIR=_build COMPILER=xelatex
+- make .travis/latex PROJECT=132-765-F18C-500 BUILDDIR=_build COMPILER=xelatex
 # - ./dropbox_uploader.sh upload _build/main.pdf ${TRAVIS_BRANCH}/main-latest.pdf
 # - ./dropbox_uploader.sh upload _build/main.pdf ${TRAVIS_BRANCH}/main-${TRAVIS_JOB_NUMBER}.pdf
 
