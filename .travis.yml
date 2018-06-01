@@ -2,10 +2,10 @@ sudo: required
 dist: trusty
 before_install:
 - chmod +x .travis/tlsetup.sh 
-- .travis/tlsetup.sh
+- ./tlsetup.sh
 
 script:
-- make .travis/latex PROJECT=132-765-F18C-500 BUILDDIR=_build COMPILER=xelatex
+- make latex PROJECT=132-765-F18C-500 BUILDDIR=_build COMPILER=xelatex
 # - ./dropbox_uploader.sh upload _build/main.pdf ${TRAVIS_BRANCH}/main-latest.pdf
 # - ./dropbox_uploader.sh upload _build/main.pdf ${TRAVIS_BRANCH}/main-${TRAVIS_JOB_NUMBER}.pdf
 
