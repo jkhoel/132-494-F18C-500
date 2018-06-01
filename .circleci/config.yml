@@ -1,13 +1,23 @@
+# version: 2
+# jobs:
+#   build:
+#     docker:
+#       - image: debian:stretch
+#     steps:
+#       - checkout
+#       - run:
+#           name: Greeting
+#           command: echo Hello, world.
+#       - run:
+#           name: Print the Current Time
+#           command: date
+
+
 version: 2
 jobs:
-  build:
-    docker:
-      - image: debian:stretch
-    steps:
-      - checkout
-      - run:
-          name: Greeting
-          command: echo Hello, world.
-      - run:
-          name: Print the Current Time
-          command: date
+   build:
+     docker:
+       - image: koppor/texlive
+     steps:
+       - checkout
+       - run: latexmk 132-765-F18C-500.tex
