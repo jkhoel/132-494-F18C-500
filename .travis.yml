@@ -18,6 +18,7 @@ before_install:
 #     xcolor
 
 script:
+- make clean
 - make latex PROJECT=$FILE_NAME BUILDDIR=_build COMPILER=xelatex
 # - ./dropbox_uploader.sh upload _build/main.pdf ${TRAVIS_BRANCH}/main-latest.pdf
 # - ./dropbox_uploader.sh upload _build/main.pdf ${TRAVIS_BRANCH}/main-${TRAVIS_JOB_NUMBER}.pdf
