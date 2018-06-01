@@ -1,7 +1,7 @@
 sudo: required
 dist: trusty
 before_install:
-- chmod +x .travis/tlsetup.sh 
+- chmod +x tlsetup.sh 
 - ./tlsetup.sh
 
 script:
