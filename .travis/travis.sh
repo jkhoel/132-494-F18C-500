@@ -41,10 +41,10 @@ sudo apt-get install -y --no-install-recommends texlive-fonts-recommended \
     texlive-xetex
 
 # Install decompression tool to extract LaTex packages later on
-sudo apt-get install -y xzdec
+# sudo apt-get install -y xzdec
 
 # Install biber for .bib compilation
-sudo apt-get install -y biber
+# sudo apt-get install -y biber
 
 # Initialize user tree for installing additional packages
 sudo tlmgr init-usertree
