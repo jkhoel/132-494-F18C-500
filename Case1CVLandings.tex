@@ -8,25 +8,57 @@
 
 \begin{multicols}{2}
 
-\cSection{INBOUND - 10 NM}
-  \cItem{COMM1 or COMM2}{CONTACT CATCC}
-  \cComment{Join Port Holding Pattern as instructed}
+  \cSection{INBOUND - 10 NM}
+    \cItem{COMM1 or COMM2}{CONTACT CATCC}
+    \cComment{Join Port Holding Pattern as instructed}
 
-\cSection{HOLDING PATTERN - 5 NM CIRCLE}
+  \cSection{HOLDING PATTERN - 5 NM CIRCLE}
     \cItem{Altitude}{AS INSRUCTED (Min. 2000 ft)}
     \cItem{Airspeed}{250 KIAS}
     \cItem{Hook}{DOWN}
+    \cItem{Anti-Skid Switch}{OFF}
+    \cItem{Hook Bypass}{SEA}
     \cComment{Depart Holding Pattern 30° opposite BRC heading (210° from BRC) - AFT of ship's beam}
 
-\cSection{Initials - 3 NM AFT OF SHIP}
+  \cSection{Initials - 3 NM AFT}
     \cItem{Altitude}{800 FT}
     \cItem{Airspeed}{350 KIAS}
     \cItem{Hook}{CHECK DOWN}
+    \cItem{LDDI}{HUD}
 
-\cSection{Break}
+  \cSection{Break}
     \cItem{Speed Brake}{EXTEND FULLY}
     \cItem{Altitude}{KEEP 800 FT}
     \cComment{Rule of Thumb: Match Gs according to 1/100 of Airspeed during deceleration in order to arrive at On-Speed AOA on roll-out (350 KIAS => 3,5 G)}
+
+  \cSection{ABEAM (180) - 1.2 TO 1.5 NM}
+    \cItem{Trim}{AS REQUIRED}
+    \cItem{Altitude}{600 FT}
+    \cItem{Speed}{ON SPEED AOA}
+
+    \cSubSection{Below 250 KIAS}
+      \cItem{Landing Gear}{DOWN AND LOCKED}
+      \cItem{Flaps}{FULL}
+      \cComment{Target speed approximatly 140 KIAS}
+
+    \cSubSection{Turn to final}
+      \cItem{Position}{ABEAM LSO PLATFORM}
+      \cItem{Angle of Bank}{30°}
+      \cItem{Rate of Decent}{200 - 300 FPM}
+      \cItem{Speed}{ON SPEED AOA}
+
+  \cSection{Aft (90) - 3/4 NM}
+    \cItem{Altitude}{450 FT}
+    \cItem{Rate of Decent}{500 fpm}
+    \cComment{Maintain optimum AOA, and a 30° AOB}
+
+  \cSection{IN THE GROOVE}
+    \cItem{AOA}{CHECK}
+    \cItem{Rate of Decent}{CHECK}
+    \cItem{Ball Call}{CALLSIGN TYPE FUELSTATE}
+    \cComment{"Thunder 204, Hornet, Ball - Three Point Five"}
+
+
 
 \end{multicols}
 
