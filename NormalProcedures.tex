@@ -105,38 +105,63 @@
     \cItem{EMI/IFEI}{CHECK}
     \cItem{External Power}{DISCONNECT}
 
-\cSection{BEFORE TAXI}
-  \cItem{INS}{CV, GND or IFA}
-  \cItem{Radar}{OPR}
-  \cItem{Wingfold}{SPREAD AND LOCK/CHECK}
-  \cItem{FCS RESET button}{PUSH}
-  \cComment{If wings are folded, verify aileron Xs are present}
 
-% \cSection{If no reset}
-  \cItem{T.O. trim button}{PUSH}
-  \cItem{FCS Exerciser Mode}{INITIATE}
+\cSection{BEFORE TAXI}
+  \cItem{Radar}{OPR}
+  \cItem{INS}{CV, GND or IFA}
   \cItem{OBOGS Control Switch}{ON}
   \cItem{OXY Flow Knob}{ON}
+  \cItem{T.O. trim button}{PUSH}
+  \cItem{FCS RESET button}{PUSH}
+  \cItem{FCS Exerciser Mode}{INITIATE}
+  % \cItem{FCS RESET button}{PUSH}
+  \cComment{Lift FCS BIT [Y] consent switch and push FCS under FCS-MC menu (on RDDI) button simultaneously} \\
   \cItem{APU}{VERIFY OFF}
+  \cItem{Hook Bypass}{FIELD/CARRIER}
   \cItem{Fuel}{BIT/SET BINGO}
-  \cItem{Altimeter}{SET}
-  \cItem{Radar Altimeter}{ON}
-  \cItem{GPWS}{BOXED}
-  \cItem{Mission Data}{ENTER}
-  \cItem{Weapons/Sensors}{AS REQUIRED}
-  \cItem{Standby Attitude Indicator}{UNCAGE}
   \cItem{Attitude Source}{STBY}
   \cItem{Altitude Source}{AUTO}
+  \cItem{GPWS}{BOXED}
+  \cItem{Mission Data}{ENTER}
+  \cItem{Standby Attitude Indicator}{UNCAGE} 
+  \cItem{Radar Altimeter}{ON}
+  \cItem{Wingfold}{SPREAD AND LOCK/CHECK}
+  \cComment{If wings are folded, verify aileron Xs are present}  \\
+  \cItem{Weapons/Sensors}{AS REQUIRED}
 
-  % \cComment{Enter 3 digit Julian Date and Event Number via UFC}
-  % \cComment{Canopy either full up or full down during taxi}
+% \cSection{BEFORE TAXI}
+%   \cItem{INS}{CV, GND or IFA}
+%   \cItem{Radar}{OPR}
+%   \cItem{Wingfold}{SPREAD AND LOCK/CHECK}
+%   \cItem{FCS RESET button}{PUSH}
+%   \cComment{If wings are folded, verify aileron Xs are present}
 
-  \cItem{Ejection Seat}{ARM}
+% % \cSection{If no reset}
+%   \cItem{T.O. trim button}{PUSH}
+%   \cItem{FCS Exerciser Mode}{INITIATE}
+%   \cItem{OBOGS Control Switch}{ON}
+%   \cItem{OXY Flow Knob}{ON}
+%   \cItem{APU}{VERIFY OFF}
+%   \cItem{Hook Bypass}{FIELD/CARRIER}
+%   \cItem{Fuel}{BIT/SET BINGO}
+%   \cItem{Altimeter}{SET}
+%   \cItem{Radar Altimeter}{ON}
+%   \cItem{GPWS}{BOXED}
+%   \cItem{Mission Data}{ENTER}
+%   \cItem{Weapons/Sensors}{AS REQUIRED}
+%   \cItem{Standby Attitude Indicator}{UNCAGE}
+%   \cItem{Attitude Source}{STBY}
+%   \cItem{Altitude Source}{AUTO}
+
+%   % \cComment{Enter 3 digit Julian Date and Event Number via UFC}
+%   % \cComment{Canopy either full up or full down during taxi}
+
+%   \cItem{Ejection Seat}{ARM}
 
 \cSection{BEFORE TAKEOFF}
   \cItem{Canopy}{CLOSED}
   \cItem{IFF}{ON}
-  \cItem{INS}{CHECK}
+  \cItem{INS}{CHECK AND NAV}
   \cItem{Parking Brake Handle}{FULLY STOWED}
   \cItem{MENU Checklist}{COMPLETE}
 
@@ -148,7 +173,7 @@
   \cSubSection{10,000 FEET}
     \cItem{Cockpit Altimeter}{CHECK}
     \cItem{Fuel Transfer}{CHECK}
-    \cItem{Radar Altimiter Low Alt. Warning}{CHECK/SET}
+    \cItem{Radar Low Altitude Warning}{CHECK/SET}
 
   \cSubSection{DESCENT/PENETRATION}
     \cItem{Engine Anti-Ice}{AS DESIRED}
