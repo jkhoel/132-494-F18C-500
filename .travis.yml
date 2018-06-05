@@ -4,7 +4,7 @@ before_install:
 # - chmod +x tlsetup.sh 
 # - ./tlsetup.sh
 - sudo apt-get -qq update
-- sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex fonts-lmodern
+- sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex
 # - sudo apt-get install -y xzdec
 # - sudo apt-get install -y biber
 - sudo tlmgr init-usertree
@@ -17,8 +17,8 @@ before_install:
 #     graphics       \
 #     xcolor
 
-# Install MS fonts and regenerate fonts cache
-- sudo apt-get install msttcorefonts
+# Install fonts and regenerate fonts cache
+- sudo apt-get install msttcorefonts fonts-lmodern
 - sudo fc-cache -fv
 
 
