@@ -19,10 +19,11 @@ before_install:
 
 script:
 # - make clean
-- make latex PROJECT=$FILE_NAME BUILDDIR=_build COMPILER=xelatex
+# - make latex PROJECT=$FILE_NAME BUILDDIR=_build COMPILER=xelatex
 # - ./dropbox_uploader.sh upload _build/main.pdf ${TRAVIS_BRANCH}/main-latest.pdf
 # - ./dropbox_uploader.sh upload _build/main.pdf ${TRAVIS_BRANCH}/main-${TRAVIS_JOB_NUMBER}.pdf
-
+  - mkdir _build
+  - xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build 132-494-F18C-500.tex
 
 # after_success:
 #   - git config --global user.email "github@hoelweb.com"
@@ -44,3 +45,6 @@ deploy:
   file_glob: true
   file: _build/*.pdf
   skip_cleanup: true
+
+after_deploy:
+  - rm -rf _build

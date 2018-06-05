@@ -28,3 +28,8 @@ latex:
 clean:
 	@rm -rf $(BUILDDIR)
 	@echo "Removed $(BUILDDIR) directory"
+
+
+
+
+  # xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build 132-494-F18C-500.tex
