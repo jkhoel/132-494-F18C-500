@@ -1,6 +1,6 @@
 %\documentclass[11pt, twoside, a4paper]{report}
 \documentclass[11pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
+% \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{gensymb}
 
@@ -12,7 +12,8 @@
 \titleformat*{\subsection}{\normalsize}
 
 \usepackage{fontspec}
-\setmainfont{Arial}
+% \setmainfont{Arial}
+\setmainfont{Lato}
 
 \usepackage{xunicode}
 \usepackage{xltxtra}
@@ -34,7 +35,7 @@
 \fancyhead[RE,LO]{132-494-F18C-500 Rev.\revisionNumber}
 
 % Setup for Checklist Documents
-\input{ChecklistSetup}
+\input{./ChecklistSetup}
 
 % VARIABLES
 \newcommand{\revisionNumber}{00}
@@ -43,11 +44,11 @@
 \title{Aircraft Check-Lists - F/A1-18C}
 \begin{document}
   
-  \input{titlepage}
+  \input{./Titlepage}
   
-  \input{NormalProcedures}
-  \input{SpecialProcedures}
-  \input{Case1CVLandings}
-  \input{RadioPresets}
+  \input{./NormalProcedures}
+  \input{./SpecialProcedures}
+  \input{./Case1Recovery}
+  \input{./RadioPresets}
       
 \end{document}
