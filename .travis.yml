@@ -12,6 +12,7 @@ before_install:
 # - sudo tlmgr install hyperref parskip  babel tools graphics xcolor
 # Install fonts and regenerate fonts cache
 # - sudo apt-get install msttcorefonts fonts-lmodern
+- sudo apt-get install fonts-lmodern
 - sudo fc-cache -fv
 
 
