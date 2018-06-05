@@ -5,21 +5,14 @@ before_install:
 # - ./tlsetup.sh
 - sudo apt-get -qq update
 - sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex
-# - sudo apt-get install -y xzdec
+- sudo apt-get install -y xzdec
 # - sudo apt-get install -y biber
 - sudo tlmgr init-usertree
 - sudo tlmgr option repository ftp://tug.org/historic/systems/texlive/2017/tlnet-final
-# - sudo tlmgr install \
-#     hyperref       \
-#     parskip        \
-#     babel          \
-#     tools          \
-#     graphics       \
-#     xcolor
-
+# - sudo tlmgr install hyperref parskip  babel tools graphics xcolor
 # Install fonts and regenerate fonts cache
-- sudo apt-get install msttcorefonts fonts-lmodern
-- sudo fc-cache -fv
+# - sudo apt-get install msttcorefonts fonts-lmodern
+# - sudo fc-cache -fv
 
 
 script:
