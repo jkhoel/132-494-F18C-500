@@ -11,11 +11,9 @@ before_install:
   - sudo apt-get install fonts-lmodern
   - sudo fc-cache -fv
 
-
 script:
   - mkdir _build
   - xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build 132-494-F18C-500.tex
-
 
 before_deploy:
   - git config --local user.name "jkhoel"
@@ -31,3 +29,6 @@ deploy:
 
 after_deploy:
   - rm -rf _build
+
+
+# xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build 132-494-F18C-500.tex
