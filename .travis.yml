@@ -7,23 +7,22 @@ before_install:
 - sudo apt-get -qq update
 - sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex
 - sudo apt-get install -y xzdec
-# - sudo apt-get install -y biber
+- sudo apt-get install -y biber
 - sudo tlmgr init-usertree
 - sudo tlmgr option repository ftp://tug.org/historic/systems/texlive/2017/tlnet-final
 # - sudo tlmgr install hyperref parskip  babel tools graphics xcolor
 # Install fonts and regenerate fonts cache
-# - sudo apt-get install msttcorefonts fonts-lmodern
 - sudo apt-get install fonts-lmodern
 - sudo fc-cache -fv
 
 
 script:
 # - make clean
-# - make latex PROJECT=$FILE_NAME BUILDDIR=_build COMPILER=xelatex
+- make latex PROJECT=$FILE_NAME BUILDDIR=_build COMPILER=xelatex
 # - ./dropbox_uploader.sh upload _build/main.pdf ${TRAVIS_BRANCH}/main-latest.pdf
 # - ./dropbox_uploader.sh upload _build/main.pdf ${TRAVIS_BRANCH}/main-${TRAVIS_JOB_NUMBER}.pdf
-  - mkdir _build
-  - xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build 132-494-F18C-500.tex
+  # - mkdir _build
+  # - xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build 132-494-F18C-500.tex
 
 # after_success:
 #   - git config --global user.email "github@hoelweb.com"
