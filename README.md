@@ -1,4 +1,4 @@
-# 132-765-F18C-500
+# 132-494-F18C-500
 Pocket  Checklist - F/A-18C Hornet
 
 ## Notes:
