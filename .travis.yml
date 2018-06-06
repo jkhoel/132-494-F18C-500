@@ -18,14 +18,13 @@ script:
 before_deploy:
   - git config --local user.name "jkhoel"
   - git config --local user.email "github@hoelweb.com"
-  - git tag "$FILE_NAME-$TRAVIS_BUILD_NUMBER"
-  # - git tag "$FILE_NAME-$TRAVIS_BUILD_NUMBER"
+  - git tag "$FILE_NAME (Build $TRAVIS_BUILD_NUMBER)"
   
 deploy:
   provider: releases
   api_key: "$GH_TOKEN"
   file_glob: true
-  file: _build/*.pdf
+  file: _build/$FILE_NAME.pdf
   skip_cleanup: true
 
 after_deploy:
