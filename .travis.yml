@@ -33,3 +33,5 @@ after_deploy:
 
 
 # xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build 132-494-F18C-500.tex
+
+# For adding output to dropbox: https://ljvmiranda921.github.io/notebook/2018/02/04/continuous-integration-for-latex/
