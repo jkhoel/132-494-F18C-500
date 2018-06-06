@@ -1,15 +1,14 @@
 sudo: required
 dist: trusty
 before_install:
-  - sudo npx semantic-release  
-  # - sudo apt-get -qq update
-  # - sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex
-  # - sudo apt-get install -y xzdec
-  # - sudo apt-get install -y biber
-  # - sudo tlmgr init-usertree
-  # - sudo tlmgr option repository ftp://tug.org/historic/systems/texlive/2017/tlnet-final
-  # - sudo apt-get install fonts-lmodern
-  # - sudo fc-cache -fv
+  - sudo apt-get -qq update
+  - sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex
+  - sudo apt-get install -y xzdec
+  - sudo apt-get install -y biber
+  - sudo tlmgr init-usertree
+  - sudo tlmgr option repository ftp://tug.org/historic/systems/texlive/2017/tlnet-final
+  - sudo apt-get install fonts-lmodern
+  - sudo fc-cache -fv
 
 script:
   - mkdir _build
@@ -19,7 +18,8 @@ before_deploy:
   - git config --local user.name "$GIT_USER_NAME"
   - git config --local user.email "$GIT_USER_EMAIL"
   # - git tag "$FILE_NAME (Build $TRAVIS_BUILD_NUMBER)"
-  - git tag "$FILE_NAME"
+  # - git tag "$FILE_NAME"
+  - git tag "v.$MAJOR_VERSION.$MINOR_VERSION.$TRAVIS_BUILD_NUMBER"
   
 deploy:
   provider: releases
