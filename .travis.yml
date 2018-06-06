@@ -12,7 +12,7 @@ before_install:
   # - sudo fc-cache -fv
 
 script:
-  # - mkdir _build
+  - mkdir _build
   # - xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build $FILE_NAME.tex
 
 before_deploy:
