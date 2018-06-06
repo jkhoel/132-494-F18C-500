@@ -1,8 +1,8 @@
 sudo: required
 dist: trusty
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install semantic-release  
+  - sudo npx semantic-release  
+  # - sudo apt-get -qq update
   # - sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended texlive-xetex
   # - sudo apt-get install -y xzdec
   # - sudo apt-get install -y biber
