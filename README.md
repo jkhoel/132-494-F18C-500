@@ -25,7 +25,7 @@ Example: Editing NormalProcedures.tex
 git checkout normal-procedures
 ```
 
-* DO NOT EDIT ANY OTHER DOCUENTS ON THE BRANCH THEN THE ONE YOU CHECKED OUT *
+*DO NOT EDIT ANY OTHER DOCUENTS ON THE BRANCH THEN THE ONE YOU CHECKED OUT*
 
 
 ### Creating a new document and branch
