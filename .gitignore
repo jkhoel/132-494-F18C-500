@@ -1,3 +1,10 @@
+#### MAIN IGNORES
+_build/
+*.pdf
+
+
+#### LATEX DEFAULTS
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
