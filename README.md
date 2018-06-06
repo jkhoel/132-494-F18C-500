@@ -25,7 +25,7 @@ Example: Editing NormalProcedures.tex
 git checkout normal-procedures
 ```
 
-** DO NOT EDIT ANY OTHER DOCUENTS ON THE BRANCH THEN THE ONE YOU CHECKED OUT **
+* DO NOT EDIT ANY OTHER DOCUENTS ON THE BRANCH THEN THE ONE YOU CHECKED OUT *
 
 
 ### Creating a new document and branch
@@ -35,10 +35,12 @@ Example: Adding a new document called EmergencyProcedures.tex
 git checkout -b emergency-procedures && git push --set-upstream origin emergency-procedures
 ```
 
-Note how the camel-cased TeX file translates into the branch name. Next step is to make the actual file and do commits as normal and finally, you need to check out the main document and add your new document to it:
+Note how the camel-cased TeX file translates into the branch name. Next step is to make the actual file and do commits as normal and finally, you need to check out the main document...
 ```git
 git checkout main
 ```
+
+... and add your new document to it:
 
 ```tex
  \input{./EmergencyProcedure.tex}
