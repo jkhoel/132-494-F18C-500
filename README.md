@@ -1,5 +1,7 @@
 # 132-494-F18C-500
-Pocket  Checklist - F/A-18C Hornet
+Pocket Checklist - F/A-18C Hornet
+
+[![Build Status](https://travis-ci.org/jkhoel/132-494-F18C-500.png?branch=master)](https://travis-ci.org/jkhoel/132-494-F18C-500)
 
 [![Build Status](https://travis-ci.org/jkhoel/132-494-F18C-500.png?branch=master)](https://travis-ci.org/jkhoel/132-494-F18C-500)
 
