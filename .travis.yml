@@ -12,7 +12,7 @@ before_install:
 
 script:
   - mkdir _build
-  # - xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build $FILE_NAME.tex
+  - xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build $FILE_NAME.tex
 
 before_deploy:
   - git config --local user.name "$GIT_USER_NAME"
