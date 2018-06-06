@@ -12,6 +12,7 @@ before_install:
 
 script:
   - mkdir _build
+  - echo "v.$MAJOR_VERSION.$MINOR_VERSION.$TRAVIS_BUILD_NUMBER" >> revision.tex
   - xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build $FILE_NAME.tex
 
 before_deploy:
@@ -19,7 +20,7 @@ before_deploy:
   - git config --local user.email "$GIT_USER_EMAIL"
   # - git tag "$FILE_NAME (Build $TRAVIS_BUILD_NUMBER)"
   # - git tag "$FILE_NAME"
-  - git tag "v.$MAJOR_VERSION.$MINOR_VERSION.$TRAVIS_BUILD_NUMBER"
+  # - git tag "v.$MAJOR_VERSION.$MINOR_VERSION.$TRAVIS_BUILD_NUMBER"
   
 deploy:
   provider: releases
@@ -30,6 +31,7 @@ deploy:
 
 after_deploy:
   - rm -rf _build
+  - rm revision.tex
 
 
 # VARIOUS INFO:
