@@ -8,7 +8,7 @@
 
 \begin{multicols}{2}
 
-\cSection{INTERIORCHECKS}
+\cSection{INTERIOR CHECKS}
   \cSubSection{Left Console}
     \cItem{OBOGS Control Sw. and Flow Knob}{OFF}
     \cItem{Circuit Breakers - 4 pcs}{PUSHED IN}
@@ -26,14 +26,13 @@
     \cItem{External Lights}{ACC. TO SOP}
     \cItem{Master Light Switch}{FORWARD}
     \cItem{Throttles}{OFF}
-    \cItem{Parking Brake}{SET}
+    \cItem{Parking Brake}{PARK}
     \cItem{Landing/Taxi Switch}{OFF}
     \cItem{Anti-Skid Switch(LAND)}{ON}
     \cItem{Anti-Skid Switch(SEA)}{OFF}
     \cItem{Flap Switch}{FULL}
     \cItem{Selective Jettison Knob}{SAFE}
     \cItem{Landing Gear Handle}{DOWN}
-    % \cItem{Landing Gear Handle Mechanical Stop}{FULLY ENGAGED}
     \cItem{Canopy Jettison Handle}{FORWARD}
 
   \cSubSection{Instrument Panel}
@@ -44,6 +43,7 @@
     \cItem{IR Coolant Switch}{OFF} 
 
   \cSubSection{Right Console}
+    \cItem{Circuit Breakers - 4 pcs}{PUSHED IN}
     \cItem{Hook handle}{UP}  
     \cItem{Wing Fold Handle}{SAME AS WING POS} 
     \cItem{Radar Altimeter}{OFF} 
@@ -119,7 +119,7 @@
   \cItem{INS}{CV, GND or IFA}
   \cItem{OBOGS Control Switch}{ON}
   \cItem{OXY Flow Knob}{ON}
-  \cItem{Wingfold}{SPREAD AND LOCK/CHECK}
+  \cItem{Wingfold}{SPREAD AND LOCK}
   \cItem{FCS RESET button}{PUSH}
   \cComment{If wings are folded, verify aileron Xs are present}
   
@@ -129,6 +129,34 @@
   \cItem{FCS Exerciser Mode}{INITIATE}
   \cComment{Lift FCS BIT consent switch [Y] and push FCS RESET button simultaneously (Hold for a few seconds)}
   % \cComment{Lift FCS BIT [Y] consent switch and push FCS under FCS-MC menu (on RDDI) button simultaneously} \\
+
+\cSection{If still no reset}
+  \cItem{FCS Circuit Breakers - 4pcs}{PULL}
+  \cItem{Wait 10 seconds}{CHECK}
+  \cItem{FCS Circuit Breakers}{RESET}
+  \cItem{FCS RESET button}{PUSH}
+
+\cSection{Reset ok}
+  \cItem{Flaps}{AUTO}
+  \cItem{FCS RESET and Paddle Switch}{ACTUATE}
+  \cItem{Flaps}{HALF}
+  \cItem{FCS Initiated BIT}{PERFORM}
+  \cComment{If BLIN codes other than 246, 270, 344, 375, 574, 604, 5005, 5032 remain following IBIT, aircraft requires maintainance.\\}
+  \cItem{Trim}{CHECK}
+  \cItem{T.O. trim button}{PUSH until TRIM ADVISORY}
+  \cItem{Flaps}{AUTO}
+
+\cSection{Controls Check}
+  \cItem{Control Stick}{CYCLE}
+  \cItem{Flaps}{HALF}
+  \cItem{Rudder Pedals}{CYCLE}
+  \cItem{Trim}{SET}
+  \cComment{Shore - 12°\\ CV - 44,000 lbs and below - 16°\\ CV - 45,000-48,000 lbs - 17°\\ CV - 49,000 lbs and above - 19°\\}
+  \cItem{Probe/Brakes/Launch Bar/Hook}{CYCLE}
+
+\clearpage
+
+\cSection{Continue}
   \cItem{APU}{VERIFY OFF}
   \cItem{Hook Bypass}{FIELD/CARRIER}
   \cItem{Fuel}{BIT/SET BINGO}
@@ -137,13 +165,12 @@
   \cItem{GPWS}{BOXED}
   \cItem{Mission Data}{ENTER}
   \cItem{Standby Attitude Indicator}{UNCAGE} 
-  \cItem{Radar Altimeter}{ON}
+  \cItem{Radar Altimeter}{SET}
+  \cComment{Shore - 450 ft\\ CV - 375 ft\\}
   \cItem{Weapons/Sensors}{AS REQUIRED}
-
+  \cItem{Ejection Seat}{ARM}
 %   % \cComment{Enter 3 digit Julian Date and Event Number via UFC}
 %   % \cComment{Canopy either full up or full down during taxi}
-
-   \cItem{Ejection Seat}{ARM}
 
 \cSection{BEFORE TAKEOFF}
   \cItem{Canopy}{CLOSED}
