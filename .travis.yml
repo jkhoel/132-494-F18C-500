@@ -12,7 +12,8 @@ before_install:
 
 script:
   - mkdir _build
-  - echo "v.$MAJOR_VERSION.$MINOR_VERSION.$TRAVIS_BUILD_NUMBER" >> revision.tex
+  # - echo "v.$MAJOR_VERSION.$MINOR_VERSION.$TRAVIS_BUILD_NUMBER" >> revision.tex
+  - echo "$TRAVIS_TAG" >> revision.tex
   - xelatex -interaction=nonstopmode -halt-on-error -output-directory=_build $FILE_NAME.tex
 
 before_deploy:
@@ -28,6 +29,9 @@ deploy:
   file_glob: true
   file: _build/$FILE_NAME.pdf
   skip_cleanup: true
+  on:
+    branch: master
+    tags: true
 
 after_deploy:
   - rm -rf _build
