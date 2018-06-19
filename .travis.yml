@@ -30,7 +30,7 @@ deploy:
   file: _build/$FILE_NAME.pdf
   skip_cleanup: true
   on:
-    branch: master
+    branch: release
     tags: true
 
 after_deploy:
